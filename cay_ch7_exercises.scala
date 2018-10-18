@@ -146,3 +146,22 @@ only other packages. I don't think this would be very useful since you are just 
 happen and you are really importing any classes. Besides, you still would need to prefix with the package name for
 anything you may want to use, for example, util.Map.
 * */
+
+//Exercise 9
+//Only System and StdIn imports
+import java.lang.System.out.{println => printStdOut}
+import java.lang.System.err.{println => printErrOut}
+import java.lang.System.getProperty
+import io.StdIn._
+
+//No qualified names (with dots)
+val user = getProperty("user.name")
+print("Password: ")
+val pass = readLine
+if("secret" == pass) printStdOut(s"Hi $user") else printErrOut("Auhentication Failed!")
+
+//Exercise 10
+//Check the documentation: https://www.scala-lang.org/api/2.11.2/#scala.package
+//You should identify many, for example, I see Throwable and BigDecimal amongst others.
+
+
